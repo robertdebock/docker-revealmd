@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/robertdebock/docker-revealmd.svg)](https://microbadger.com/images/robertdebock/docker-revealmd "Get your own image badge on microbadger.com")
+
 # The reveal-md container.
 The application reveal-md is used to show markdown files in the browser.
 
