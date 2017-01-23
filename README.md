@@ -18,3 +18,6 @@ If you're lazy, use:
     docker run -p 1948:1948 $(docker build -q .)
 
 Which builds an image and runs it immediately.
+
+# Seeing the presentation.
+Open your browser and go to: http://localhost:1948/ (Or incase Docker is running somewhere else, replace "localhost" by the name of host Docker is running on.)
