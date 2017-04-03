@@ -13,4 +13,8 @@ WORKDIR /usr/src/app
 
 ENTRYPOINT ["/sbin/tini", "-g", "--"]
 
-CMD reveal-md index.md --port 1948
+CMD if [ ${host} ] ; then \
+      reveal-md index.md --port 1948 \
+    else \
+      reveal-md index.md --port 1948 --host ${host}
+    fi
