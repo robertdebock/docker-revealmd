@@ -16,5 +16,5 @@ ENTRYPOINT ["/sbin/tini", "-g", "--"]
 CMD if [ ${host} ] ; then \
       reveal-md index.md --port 1948 \
     else \
-      reveal-md index.md --port 1948 --host ${host}
+      reveal-md index.md --port 1948 --host ${host} \
     fi
