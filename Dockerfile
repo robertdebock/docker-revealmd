@@ -3,7 +3,8 @@ FROM mhart/alpine-node
 RUN npm install -g reveal-md && \
     npm cache clean
 
-RUN apk add --no-cache --update tini
+RUN apk add --no-cache --update tini && \
+    rm -Rf /var/cache/apk
 
 ADD *.md /usr/src/app/
 
