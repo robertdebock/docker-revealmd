@@ -1,7 +1,7 @@
 FROM mhart/alpine-node
 
 RUN npm install -g reveal-md && \
-    npm cache clean
+    npm cache clean --force
 
 RUN apk add --no-cache --update tini && \
     rm -Rf /var/cache/apk
