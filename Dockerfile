@@ -14,4 +14,4 @@ WORKDIR /usr/src/app
 
 ENTRYPOINT ["/sbin/tini", "-g", "--"]
 
-CMD reveal-md index.md --port 1948
+CMD reveal-md -w index.md --port 1948
