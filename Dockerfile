@@ -1,5 +1,7 @@
 FROM mhart/alpine-node
 
+ENV PATH="/usr/local/bin:${PATH}"
+
 RUN npm install -g reveal-md && \
     npm cache clean --force
 
