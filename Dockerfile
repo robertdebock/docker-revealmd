@@ -1,10 +1,18 @@
 FROM mhart/alpine-node
 
+ENV PATH="/usr/local/bin:${PATH}"
+
 RUN npm install -g reveal-md && \
     npm cache clean --force
 
-RUN apk add --no-cache --update tini && \
+RUN apk add --no-cache --update tini curl && \
     rm -Rf /var/cache/apk
+
+COPY *.patch /
+
+ADD add-phantomjs.sh /
+
+RUN sh /add-phantomjs.sh
 
 ADD *.md /usr/src/app/
 
