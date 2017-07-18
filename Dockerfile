@@ -8,6 +8,8 @@ RUN npm install -g reveal-md && \
 RUN apk add --no-cache --update tini curl && \
     rm -Rf /var/cache/apk
 
+COPY *.patch /
+
 RUN sh add-phantomjs.sh
 
 ADD *.md /usr/src/app/
