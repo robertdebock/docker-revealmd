@@ -10,7 +10,9 @@ RUN apk add --no-cache --update tini curl && \
 
 COPY *.patch /
 
-RUN sh add-phantomjs.sh
+ADD add-phantomjs.sh /
+
+RUN sh /add-phantomjs.sh
 
 ADD *.md /usr/src/app/
 
