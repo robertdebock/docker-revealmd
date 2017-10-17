@@ -1,7 +1,7 @@
 FROM mhart/alpine-node
 
 RUN npm install -g reveal-md && \
-    npm install phantomjs && \
+    npm install phantomjs-prebuilt && \
     npm cache clean --force && \
     apk add --no-cache --update tini && \
     rm -Rf /var/cache/apk
