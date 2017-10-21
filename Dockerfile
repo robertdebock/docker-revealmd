@@ -4,7 +4,8 @@ RUN npm install -g reveal-md && \
     npm install phantomjs-prebuilt && \
     npm cache clean --force && \
     apk add --no-cache --update tini && \
-    rm -Rf /var/cache/apk
+    rm -Rf /var/cache/apk && \
+    ln -s /node_modules/phantomjs-prebuilt/bin/phantomjs /bin
 
 ADD *.md /usr/src/app/
 
