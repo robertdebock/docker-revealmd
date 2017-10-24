@@ -1,11 +1,10 @@
 FROM mhart/alpine-node
 
 RUN npm install -g reveal-md && \
-    npm install phantomjs-prebuilt && \
+    npm install -g phantomjs-prebuilt && \
     npm cache clean --force && \
     apk add --no-cache --update tini && \
-    rm -Rf /var/cache/apk && \
-    ln -s /node_modules/phantomjs-prebuilt/bin/phantomjs /bin
+    rm -Rf /var/cache/apk
 
 ADD *.md /usr/src/app/
 
