@@ -1,5 +1,8 @@
 FROM mhart/alpine-node
 
+LABEL date=05-feb-2018
+LABEL version=1.0
+
 RUN npm install -g reveal-md && \
     npm install phantomjs-prebuilt && \
     npm cache clean --force && \
