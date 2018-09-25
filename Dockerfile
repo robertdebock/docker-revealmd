@@ -6,8 +6,7 @@ LABEL version=1.1
 RUN npm install -g reveal-md && \
     npm cache clean --force && \
     apk add --no-cache --update tini && \
-    rm -Rf /var/cache/apk && \
-    ln -s /node_modules/phantomjs-prebuilt/bin/phantomjs /bin
+    rm -Rf /var/cache/apk
 
 EXPOSE 1948
 
