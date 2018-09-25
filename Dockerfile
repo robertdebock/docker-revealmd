@@ -9,8 +9,6 @@ RUN npm install -g reveal-md && \
     rm -Rf /var/cache/apk && \
     ln -s /node_modules/phantomjs-prebuilt/bin/phantomjs /bin
 
-ADD *.md /usr/src/app/
-
 EXPOSE 1948
 
 WORKDIR /usr/src/app
