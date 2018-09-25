@@ -4,7 +4,6 @@ LABEL date=25-sep-2018
 LABEL version=1.1
 
 RUN npm install -g reveal-md && \
-    npm install pdf-puppeteer && \
     npm cache clean --force && \
     apk add --no-cache --update tini && \
     rm -Rf /var/cache/apk && \
@@ -16,6 +15,6 @@ EXPOSE 1948
 
 WORKDIR /usr/src/app
 
-ENTRYPOINT ["/sbin/tini", "-g", "--"]
+ENTRYPOINT ["/sbin/tini", "-g", "--", "reveal-md"]
 
-CMD reveal-md index.md
+CMD reveal-md
