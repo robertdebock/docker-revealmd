@@ -4,7 +4,7 @@ LABEL date=25-sep-2018
 LABEL version=1.1
 
 RUN npm install -g reveal-md && \
-    npm install phantomjs-prebuilt && \
+    npm install pdf-puppeteer && \
     npm cache clean --force && \
     apk add --no-cache --update tini && \
     rm -Rf /var/cache/apk && \
