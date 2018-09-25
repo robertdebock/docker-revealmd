@@ -6,7 +6,7 @@ The application [reveal-md](https://github.com/webpro/reveal-md) is used to show
 # Running the container.
 Make your presentation in a file like index.md and continue:
 
-    docker run -v $(pwd):/usr/src/app -p 1948:1948 robertdebock/docker-revealmd
+    docker run -v $(pwd):/usr/src/app:Z -p 1948:1948 robertdebock/docker-revealmd
 
 Here you map your current directory ($(pwd)) into the directory that reveal-md presents.
 
