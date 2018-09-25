@@ -15,6 +15,6 @@ EXPOSE 1948
 
 WORKDIR /usr/src/app
 
-ENTRYPOINT ["/sbin/tini", "-g", "--", "reveal-md"]
+ENTRYPOINT ["/sbin/tini", "-g", "--"]
 
 CMD reveal-md
