@@ -9,7 +9,7 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 
 RUN dnf install -y npm && \
     dnf clean all && \
-    npm install -g reveal-md && \
+    npm install -g reveal-md puppeteer && \
     npm cache clean --force && \
     chmod +x /tini
 
