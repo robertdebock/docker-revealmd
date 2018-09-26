@@ -20,3 +20,5 @@ WORKDIR /usr/src/app
 ENTRYPOINT ["/tini", "-g", "--"]
 
 CMD reveal-md
+
+HEALTHCHECK CMD printf "GET / HTTP/1.1\n\n" > /dev/tcp/127.0.0.1/1948
