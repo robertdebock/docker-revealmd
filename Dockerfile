@@ -1,4 +1,4 @@
-FROM fedora
+FROM fedora:28
 
 LABEL date=26-sep-2018
 LABEL version=1.2
