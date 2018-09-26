@@ -1,17 +1,22 @@
-FROM mhart/alpine-node
+FROM fedora
 
-LABEL date=25-sep-2018
-LABEL version=1.1
+LABEL date=26-sep-2018
+LABEL version=1.2
 
-RUN npm install -g reveal-md && \
+ENV TINI_VERSION v0.18.0
+
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+
+RUN dnf install -y npm && \
+    dnf clean all && \
+    npm install -g reveal-md && \
     npm cache clean --force && \
-    apk add --no-cache --update tini && \
-    rm -Rf /var/cache/apk
+    chmod +x /tini
 
 EXPOSE 1948
 
 WORKDIR /usr/src/app
 
-ENTRYPOINT ["/sbin/tini", "-g", "--"]
+ENTRYPOINT ["/tini", "-g", "--"]
 
 CMD reveal-md
