@@ -1,7 +1,8 @@
-FROM fedora:28
+FROM fedora:31
 
-LABEL date=26-sep-2018
-LABEL version=1.2
+LABEL maintainer="Robert de Bock <robert@meinit.nl>"
+LABEL date=22-feb-2020
+LABEL version=1.3
 
 ENV TINI_VERSION v0.18.0
 
