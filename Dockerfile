@@ -1,10 +1,10 @@
-FROM fedora:31
+FROM fedora:32
 
 LABEL maintainer="Robert de Bock <robert@meinit.nl>"
-LABEL date=22-feb-2020
-LABEL version=1.3
+LABEL date=5-jun-2020
+LABEL version=1.4
 
-ENV TINI_VERSION v0.18.0
+ENV TINI_VERSION v0.19.0
 
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 
