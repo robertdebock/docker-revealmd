@@ -8,13 +8,11 @@ The application [reveal-md](https://github.com/webpro/reveal-md) is used to show
 
 ## Running the container.
 
-Make your presentation in a file like index.md and continue:
+Make your presentation in a file like `index.md` and continue:
 
 ```bash
-docker run -v $(pwd):/usr/src/app:Z -p 1948:1948 robertdebock/docker-revealmd
+docker run -v $(pwd):/usr/src/app:Z -p 1948:1948 robertdebock/docker-revealmd index.md
 ```
-
-Here you map your current directory ($(pwd)) into the directory that reveal-md presents.
 
 ## Seeing the presentation.
 
@@ -23,5 +21,5 @@ Open your browser and go to: [http://localhost:1948/](http://localhost:1948/) (O
 If you want to present on anything other than "localhost" feed reveal-md the host ip address like so:
 
 ```bash
-docker run -e host=192.168.1.1 -v $(pwd):/usr/src/app:Z -p 1948:1948 robertdebock/docker-revealmd
+docker run -e host=192.168.1.1 -v $(pwd):/usr/src/app:Z -p 1948:1948 robertdebock/docker-revealmd index.md
 ```
