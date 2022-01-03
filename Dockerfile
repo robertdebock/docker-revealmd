@@ -3,7 +3,7 @@ FROM fedora:32
 LABEL maintainer="Robert de Bock <robert@meinit.nl>"
 LABEL date=6-oct-2020
 LABEL version=1.5
-LABEL build_date="2021-12-30"
+LABEL build_date="2022-01-03"
 
 RUN dnf install -y npm && \
     dnf clean all && \
