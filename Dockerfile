@@ -1,9 +1,9 @@
-FROM fedora:38
+FROM fedora:39
 
 LABEL maintainer="Robert de Bock <robert@meinit.nl>"
-LABEL date=13-jun-2023
-LABEL version=1.5
-LABEL build_date="2023-06-13"
+LABEL date=08-jan-2024
+LABEL version=1.6
+LABEL build_date="2024-01-08"
 
 RUN dnf install -y npm && \
     dnf clean all && \
